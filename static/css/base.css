@@ -1,11 +1,3 @@
-html {
-    height: 100%;
-}
-
 body {
-	background: url('/media/h') no-repeat center center fixed;
-	background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: "Lato";
+    background-color: rgb(56, 94, 79);
 }
