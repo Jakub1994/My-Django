@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container row g-0">
+            <a class="navbar-brand col-sm-6 col-md-8" href="#!">
+                Green Store
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+{% endblock %}
+
 {% block content %}
 <h1 class="display-4 text-success">It works!</h1>
 {% endblock %}
