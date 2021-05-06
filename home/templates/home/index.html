@@ -16,8 +16,8 @@
             <h1 class="my-4">Food Store</h1>
             <div class="list-group">
                 <a class="list-group-item" href="{% url 'products' %}">All</a>
-                <a class="list-group-item" href="#!">Fruits</a>
-                <a class="list-group-item" href="#!">Veggies</a>
+                <a class="list-group-item" href="{% url 'products' %}?category=Fruits">Fruits</a>
+                <a class="list-group-item" href="{% url 'products' %}?category=Vegetables">Veggies</a>
             </div>
         </div>
         <div class="col-lg-9">
