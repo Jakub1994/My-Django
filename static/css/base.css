@@ -16,5 +16,9 @@ body {
 }
 
 .left{
-    align-items: left;
+   float: right; 
+}
+
+.sizex{
+    width: 100%;
 }
