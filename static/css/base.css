@@ -5,3 +5,16 @@ body {
 .middle {
     text-align: center
 }
+
+.photo{
+    height: 200px;
+    align-items: center;
+}
+.set{
+    padding-bottom:15px;
+    margin: auto;
+}
+
+.left{
+    align-items: left;
+}
