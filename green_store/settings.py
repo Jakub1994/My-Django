@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [

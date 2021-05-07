@@ -54,8 +54,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">
-                Contact Us
+              <a class="nav-link active" aria-current="page" href="mailto:ostach2094@gmail.com">
+                Contact
               </a>
             </li>
             <li class="nav-item dropdown">
@@ -67,7 +67,6 @@
                   {% if request.user.is_superuser %}
                     <li><a class="dropdown-item" href="#">Product Managment</a></li>
                   {% endif %}
-                  <li><a class="dropdown-item" href="#">My Profile</a></li>
                   <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
                   <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
