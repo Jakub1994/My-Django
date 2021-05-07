@@ -121,3 +121,11 @@ a.category-badge > span.badge:hover{
 .float-right{
     float: right;
 }
+
+.container {
+    max-width: 960px;
+}
+
+.correct{
+    width: 100%;
+}
