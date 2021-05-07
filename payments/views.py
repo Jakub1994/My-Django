@@ -9,7 +9,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-from bag.contexts import bag_contents
+from bag.contexts import bag_content
 
 import stripe
 import json
@@ -97,7 +97,7 @@ def payments(request):
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
-        current_bag = bag_contents(request)
+        current_bag = bag_content(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -140,9 +140,9 @@ def payments(request):
     return render(request, template, context)
 
 
-def checkout_success(request, order_number):
+def payment_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful payments
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
