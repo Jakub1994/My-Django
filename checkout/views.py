@@ -18,12 +18,12 @@ def checkout(request):
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
         line_items=[{
-            'price': 'price_1H06q8IdX0gthvYPWudV1aw1',
+            'price': '{{ PRICE_ID }}',
             'quantity': 1,
         }],
         mode='payment',
         success_url=request.build_absolute_uri(reverse('thanks')) + '?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url=request.build_absolute_uri(reverse('index')),
+        cancel_url=request.build_absolute_uri(reverse('checkout')),
     )
 
     return JsonResponse({
