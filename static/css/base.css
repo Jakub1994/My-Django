@@ -117,3 +117,7 @@ a.category-badge > span.badge:hover{
           padding-top: 164px;
       }
   }
+
+.float-right{
+    float: right;
+}
