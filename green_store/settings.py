@@ -86,6 +86,9 @@ TEMPLATES = [
     },
 ]
 
+WSGI_APPLICATION = 'stripe_example.wsgi.application'
+
+
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -165,7 +168,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51IliFGD4UjytsrtrXDzIS8a3UCQFdlCLfw8ZseRfOO8JcxovPa8jF21qxuY8C2FPM5o2dmBi0x3e5QMbiIVTihIc00PohrAY5U')
+STRIPE_PRIVATE_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51IliFGD4UjytsrtrdxGGSmfLFzYMTW8lNErGf5nZh3s8gi2CTFKr9JZWSj4IMpPYvlAliqjwMPoSFqWC6TwR0sNo00Lpjg65Jb')
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
