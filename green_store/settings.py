@@ -86,7 +86,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'stripe_example.wsgi.application'
+WSGI_APPLICATION = 'green_store.wsgi.application'
 
 
 AUTHENTICATION_BACKENDS = (
